@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "fO5QLi1HHysnsTa4+/6m83i8ydWcKcEU3qnBYR38WTM=",
+  "Source": "StockApp",
+  "BasePath": "_content/StockApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StockApp\\wwwroot",
+      "Source": "StockApp",
+      "ContentRoot": "C:\\Users\\Ancol\\Desktop\\Bai_tap\\StockApp\\StockApp\\wwwroot\\",
+      "BasePath": "_content/StockApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Ancol\\Desktop\\Bai_tap\\StockApp\\StockApp\\wwwroot\\StyleSheet.css",
+      "SourceId": "StockApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ancol\\Desktop\\Bai_tap\\StockApp\\StockApp\\wwwroot\\",
+      "BasePath": "_content/StockApp",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

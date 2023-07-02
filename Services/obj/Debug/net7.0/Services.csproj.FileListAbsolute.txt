@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\Services.deps.json
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\Services.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\Services.pdb
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\Entities.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\ServiceContracts.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\Entities.pdb
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\bin\Debug\net7.0\ServiceContracts.pdb
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.AssemblyInfo.cs
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.csproj.CopyComplete
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\refint\Services.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\Services.pdb
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\Services\obj\Debug\net7.0\ref\Services.dll

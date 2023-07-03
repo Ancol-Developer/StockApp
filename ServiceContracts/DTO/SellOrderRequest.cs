@@ -6,20 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Models
+namespace Entities.DTO
 {
-    public class BuyOrder
+    public class SellOrderRequest
     {
-        public Guid BuyOrderID { get; set; }
         [Required]
         public string StockSymbol { get; set; }
         [Required]
         public string StockName { get; set; }
         [OrderAndSellDateTimeValidation("Jan 01,2000")]
         public DateTime DateAndTimeOfOrder { get; set; }
-        [Range(1, 100000)]
+        [Range(1,100000)]
         public uint Quantity { get; set; }
-        [Range(1, 10000)]
+        [Range(1,10000)]
         public double Price { get; set; }
+        public SellOrder ToSellOrder()
+        {
+            return new SellOrder
+            {
+                StockSymbol = StockSymbol,
+                StockName = StockName,
+                DateAndTimeOfOrder = DateAndTimeOfOrder,
+                Quantity = Quantity,
+                Price = Price
+            };
+        }
     }
 }

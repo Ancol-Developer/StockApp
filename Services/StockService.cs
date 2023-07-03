@@ -1,4 +1,5 @@
-﻿using Entities.DTO;
+﻿using Entities;
+using Entities.DTO;
 using ServiceContracts;
 using System;
 using System.Collections.Generic;
@@ -10,24 +11,45 @@ namespace Services
 {
     public class StockService : IStockService
     {
-        public Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
+        private readonly List<BuyOrder> _buyOrder;
+        private readonly List<SellOrder> _sellOrders;
+        public StockService()
         {
-            throw new NotImplementedException();
+            _buyOrder = new List<BuyOrder>();
+            _sellOrders = new List<SellOrder>();
+        }
+        public BuyOrderResponse CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
+        {
+            if (buyOrderRequest == null)
+            {
+                throw new ArgumentNullException(nameof(buyOrderRequest));
+            }
+            BuyOrder buyOrder = buyOrderRequest.ToBuyOrder();
+            buyOrder.BuyOrderID = Guid.NewGuid();
+            _buyOrder.Add(buyOrder);
+            return buyOrder.ToBuyOrderResponse();
         }
 
-        public Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
+        public SellOrderResponse CreateSellOrder(SellOrderRequest? sellOrderRequest)
         {
-            throw new NotImplementedException();
+            if(sellOrderRequest == null)
+            {
+                throw new ArgumentNullException(nameof(sellOrderRequest));
+            }
+            SellOrder sellOrder = sellOrderRequest.ToSellOrder();
+            sellOrder.SellOrderID = Guid.NewGuid();
+            _sellOrders.Add(sellOrder);
+            return sellOrder.ToSellOrderResponse();
         }
 
-        public Task<List<BuyOrderResponse>> GetBuyOrders()
+        public List<BuyOrderResponse> GetBuyOrders()
         {
-            throw new NotImplementedException();
+            return _buyOrder.OrderByDescending(temp => temp.DateAndTimeOfOrder).Select(temp => temp.ToBuyOrderResponse()).ToList();
         }
 
-        public Task<List<SellOrderResponse>> GetSellOrders()
+        public List<SellOrderResponse> GetSellOrders()
         {
-            throw new NotImplementedException();
+            return _sellOrders.OrderByDescending(temp => temp.DateAndTimeOfOrder).Select(temp => temp.ToSellOrderResponse()).ToList();
         }
     }
 }

@@ -53,9 +53,8 @@ namespace StockApp.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult BuyOrder(BuyOrderRequest buyOrderRequest)
+        public async Task<IActionResult> BuyOrder(BuyOrderRequest buyOrderRequest)
         {
-            buyOrderRequest.DateAndTimeOfOrder = DateTime.Now;
             ModelState.Clear();
             TryValidateModel(buyOrderRequest);
             if(!ModelState.IsValid)
@@ -68,15 +67,14 @@ namespace StockApp.Controllers
                 };
                 return View("Index", trade);
             }
-            BuyOrderResponse buyOrderResponse = _stockService.CreateBuyOrder(buyOrderRequest);
+            BuyOrderResponse buyOrderResponse = await _stockService.CreateBuyOrder(buyOrderRequest);
             return RedirectToAction(nameof(Order));
         }
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult SellOrder(SellOrderRequest sellOrderRequest)
+        public async Task<IActionResult> SellOrder(SellOrderRequest sellOrderRequest)
         {
-            sellOrderRequest.DateAndTimeOfOrder = DateTime.Now;
             ModelState.Clear();
             TryValidateModel(sellOrderRequest);
             if (!ModelState.IsValid)
@@ -90,17 +88,17 @@ namespace StockApp.Controllers
                 };
                 return View("Index", trade);
             }
-            SellOrderResponse sellOrderResponse = _stockService.CreateSellOrder(sellOrderRequest);
+            SellOrderResponse sellOrderResponse = await _stockService.CreateSellOrder(sellOrderRequest);
             return RedirectToAction(nameof(Order));
         }
 
         [Route("[action]")]
-        public IActionResult Order()
+        public async Task<IActionResult> Order()
         {
             Orders orders = new Orders()
             {
-                BuyOrders=_stockService.GetBuyOrders(),
-                SellOrders=_stockService.GetSellOrders(),
+                BuyOrders= await _stockService.GetBuyOrders(),
+                SellOrders=await _stockService.GetSellOrders(),
             };
             return View(orders);
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\StockApp\\StockApp.csproj": {}
+    "C:\\Users\\Ancol\\Desktop\\New folder\\StockApp\\StockApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj": {
+    "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,21 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj": {
+    "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj",
-        "projectName": "ServiceContracts",
-        "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\obj\\",
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj",
+        "projectName": "RepositoryContacts",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +89,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj"
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj"
               }
             }
           }
@@ -114,21 +120,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Services\\Services.csproj": {
+    "C:\\Users\\Ancol\\Desktop\\New folder\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Services\\Services.csproj",
-        "projectName": "Services",
-        "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Services\\obj\\",
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,11 +148,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj"
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj"
+              "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj"
               }
             }
           }
@@ -186,21 +192,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\StockApp\\StockApp.csproj": {
+    "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\StockApp\\StockApp.csproj",
-        "projectName": "StockApp",
-        "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\StockApp\\StockApp.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\StockApp\\obj\\",
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj",
+        "projectName": "ServiceContracts",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -214,14 +220,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj"
-              },
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj"
-              },
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Services\\Services.csproj"
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj"
               }
             }
           }
@@ -247,6 +247,170 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ancol\\Desktop\\New folder\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj"
+              },
+              "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ancol\\Desktop\\New folder\\StockApp\\StockApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\StockApp\\StockApp.csproj",
+        "projectName": "StockApp",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\StockApp\\StockApp.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\StockApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\IFinnhubRepository\\RepositoryContacts.csproj"
+              },
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Repository\\Repository.csproj"
+              },
+              "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj"
+              },
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Services\\Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
@@ -254,7 +418,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

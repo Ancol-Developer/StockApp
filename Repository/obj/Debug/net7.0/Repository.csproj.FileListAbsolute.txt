@@ -1,0 +1,17 @@
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\Repository.deps.json
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\Repository.dll
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\Repository.pdb
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\Entities.dll
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\RepositoryContacts.dll
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\Entities.pdb
+C:\Users\Ancol\Desktop\New folder\Repository\bin\Debug\net7.0\RepositoryContacts.pdb
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.csproj.AssemblyReference.cache
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.AssemblyInfoInputs.cache
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.AssemblyInfo.cs
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.csproj.CopyComplete
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.dll
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\refint\Repository.dll
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\Repository.pdb
+C:\Users\Ancol\Desktop\New folder\Repository\obj\Debug\net7.0\ref\Repository.dll

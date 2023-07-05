@@ -1,0 +1,15 @@
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\bin\Debug\net7.0\RepositoryContacts.deps.json
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\bin\Debug\net7.0\RepositoryContacts.dll
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\bin\Debug\net7.0\RepositoryContacts.pdb
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\bin\Debug\net7.0\Entities.dll
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\bin\Debug\net7.0\Entities.pdb
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.csproj.AssemblyReference.cache
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.AssemblyInfoInputs.cache
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.AssemblyInfo.cs
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.csproj.CoreCompileInputs.cache
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.csproj.CopyComplete
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.dll
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\refint\RepositoryContacts.dll
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\RepositoryContacts.pdb
+C:\Users\Ancol\Desktop\New folder\IFinnhubRepository\obj\Debug\net7.0\ref\RepositoryContacts.dll

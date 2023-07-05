@@ -1,5 +1,7 @@
 ﻿using Entities;
 using Entities.DTO;
+using Microsoft.EntityFrameworkCore;
+using Repository;
 using ServiceContracts;
 using System;
 using System.Collections.Generic;
@@ -11,45 +13,48 @@ namespace Services
 {
     public class StockService : IStockService
     {
-        private readonly List<BuyOrder> _buyOrder;
-        private readonly List<SellOrder> _sellOrders;
-        public StockService()
+        private readonly IStockRepository _stockRepository;
+
+        public StockService(IStockRepository stockRepository)
         {
-            _buyOrder = new List<BuyOrder>();
-            _sellOrders = new List<SellOrder>();
+            _stockRepository = stockRepository;
         }
-        public BuyOrderResponse CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
+        public async Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
         {
             if (buyOrderRequest == null)
             {
                 throw new ArgumentNullException(nameof(buyOrderRequest));
             }
-            BuyOrder buyOrder = buyOrderRequest.ToBuyOrder();
+            buyOrderRequest.DateAndTimeOfOrder = DateTime.Now;
+            BuyOrder buyOrder= buyOrderRequest.ToBuyOrder();
             buyOrder.BuyOrderID = Guid.NewGuid();
-            _buyOrder.Add(buyOrder);
+            await _stockRepository.CreateBuyOrder(buyOrder);
             return buyOrder.ToBuyOrderResponse();
         }
 
-        public SellOrderResponse CreateSellOrder(SellOrderRequest? sellOrderRequest)
+        public async Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
         {
             if(sellOrderRequest == null)
             {
                 throw new ArgumentNullException(nameof(sellOrderRequest));
             }
+            sellOrderRequest.DateAndTimeOfOrder= DateTime.Now;
             SellOrder sellOrder = sellOrderRequest.ToSellOrder();
             sellOrder.SellOrderID = Guid.NewGuid();
-            _sellOrders.Add(sellOrder);
+            await _stockRepository.CreateSellOrder(sellOrder);
             return sellOrder.ToSellOrderResponse();
         }
 
-        public List<BuyOrderResponse> GetBuyOrders()
+        public async Task<List<BuyOrderResponse>> GetBuyOrders()
         {
-            return _buyOrder.OrderByDescending(temp => temp.DateAndTimeOfOrder).Select(temp => temp.ToBuyOrderResponse()).ToList();
+            List<BuyOrder> list_buyOrder = await _stockRepository.GetBuyOrders();
+            return list_buyOrder.Select(temp => temp.ToBuyOrderResponse()).ToList();
         }
 
-        public List<SellOrderResponse> GetSellOrders()
+        public async Task<List<SellOrderResponse>> GetSellOrders()
         {
-            return _sellOrders.OrderByDescending(temp => temp.DateAndTimeOfOrder).Select(temp => temp.ToSellOrderResponse()).ToList();
+            List<SellOrder> list_sellOrder = await _stockRepository.GetSellOrders();
+            return list_sellOrder.Select(temp => temp.ToSellOrderResponse()).ToList();
         }
     }
 }

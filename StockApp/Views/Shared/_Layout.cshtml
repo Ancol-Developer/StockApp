@@ -34,6 +34,14 @@
 
             <div class="navbar mb">
                 <ul>
+                    @if (ViewBag.CurrentUrl == "~/Explore")
+                    {
+                        <li><a asp-controller="Stocks" asp-action="Explore" class="nav-active">Explore</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-controller="Stocks" asp-action="Explore">Explore</a></li>
+                    }
                     @if(ViewBag.CurrentUrl == "~/Trade/Index")
                     {
                         <li><a asp-controller="Trade" asp-action="Index" class="nav-active">Trade</a></li>
@@ -42,7 +50,7 @@
                     {
                         <li><a asp-controller="Trade" asp-action="Index">Trade</a></li>
                     }
-                    @if (ViewBag.CurrentUrl == "~/Trade/Orders")
+                    @if (ViewBag.CurrentUrl == "~/Trade/Order")
                     {
                         <li><a asp-controller="Trade" asp-action="Order" class="nav-active">Orders</a></li>
                     }
@@ -50,6 +58,7 @@
                     {
                         <li><a asp-controller="Trade" asp-action="Order">Orders</a></li>
                     }
+                    
                 </ul>
             </div>
 

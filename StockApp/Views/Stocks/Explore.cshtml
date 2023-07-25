@@ -42,14 +42,14 @@
                     <li>
                         @if (Context.Request.Query.ContainsKey("showAll"))
                         {
-                            <a href="~/Stocks/Explore/@stock.StockSymbol?showAll=@Context.Request.Query["showAll"]">
+                            <a href="~/Trade/Index/@stock.StockSymbol?showAll=@Context.Request.Query["showAll"]">
                                 <h4>@stock.StockName</h4>
                                 <div class="text-grey">(@stock.StockSymbol)</div>
                             </a>
                         }
                         else
                         {
-                            <a href="~/Stocks/Explore/@stock.StockSymbol">
+                            <a href="~/Trade/Index/@stock.StockSymbol">
                                 <h4>@stock.StockName</h4>
                                 <div class="text-grey">(@stock.StockSymbol)</div>
                             </a>

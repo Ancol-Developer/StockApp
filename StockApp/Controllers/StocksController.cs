@@ -14,7 +14,7 @@ namespace StockApp.Controllers
         private readonly IFinnhubService _finnhubService;
         private readonly TradingOption _tradingoptions;
 
-        public StocksController(IFinnhubService finnhubService,IOptions<TradingOption> tradingoptions)
+        public StocksController(IFinnhubService finnhubService, IOptions<TradingOption> tradingoptions)
         {
             _finnhubService = finnhubService;
             _tradingoptions = tradingoptions.Value;
@@ -29,12 +29,15 @@ namespace StockApp.Controllers
             List<Dictionary<string, string>>? stocksDictionary = await _finnhubService.GetStocks();
             List<Stock> stocks = new List<Stock>();
             // filter the stocks
-            if (!showAll && _tradingoptions.Top25PopularStocks!=null)
+            if (stocksDictionary is not null)
             {
-                string[]? top25PopularStocksList = _tradingoptions.Top25PopularStocks.Split(',');
-                if (top25PopularStocksList!=null)
+                if (!showAll && _tradingoptions.Top25PopularStocks != null)
                 {
-                    stocksDictionary = stocksDictionary.Where(temp => top25PopularStocksList.Contains(Convert.ToString(temp["symbol"]))).ToList();
+                    string[]? top25PopularStocksList = _tradingoptions.Top25PopularStocks.Split(',');
+                    if (top25PopularStocksList is not null)
+                    {
+                        stocksDictionary = stocksDictionary.Where(temp => top25PopularStocksList.Contains(Convert.ToString(temp["symbol"]))).ToList();
+                    }
                 }
             }
             // convert dictionary object into Stock object
@@ -43,6 +46,7 @@ namespace StockApp.Controllers
                 StockName = Convert.ToString(temp["description"]),
                 StockSymbol = Convert.ToString(temp["symbol"])
             }).ToList();
+            ViewBag.stock = stock;
             return View(stocks);
         }
     }

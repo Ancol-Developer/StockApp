@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using RepositoryContacts;
 using System.Net.Http;
 using System.Text.Json;
@@ -10,15 +11,18 @@ namespace Repository
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<FinnhubRepository> _logger;
 
-        public FinnhubRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+        public FinnhubRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration,ILogger<FinnhubRepository> logger)
         {
             _httpClientFactory = httpClientFactory;
             _configuration = configuration;
+            this._logger = logger;
         }
 
         public async Task<Dictionary<string, object>?> GetCompanyProfile(string stockSymbol)
         {
+            _logger.LogInformation("In {classname}.{methodname}",nameof(FinnhubRepository),nameof(GetCompanyProfile));
             HttpClient httpClient = _httpClientFactory.CreateClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {
@@ -44,6 +48,7 @@ namespace Repository
 
         public async Task<Dictionary<string, object>?> GetStockPriceQuote(string stockSymbol)
         {
+            _logger.LogInformation("In {classname}.{methodname}", nameof(FinnhubRepository), nameof(GetStockPriceQuote));
             HttpClient httpClient = _httpClientFactory.CreateClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {
@@ -68,6 +73,8 @@ namespace Repository
 
         public async Task<List<Dictionary<string, string>>?> GetStocks()
         {
+            _logger.LogInformation("In {classname}.{methodname}", nameof(FinnhubRepository), nameof(GetStocks));
+
             HttpClient httpClient = _httpClientFactory.CreateClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {
@@ -86,6 +93,8 @@ namespace Repository
 
         public async Task<Dictionary<string, object>?> SearchStocks(string stockSymbolToSearch)
         {
+            _logger.LogInformation("In {classname}.{methodname}", nameof(FinnhubRepository), nameof(SearchStocks));
+
             HttpClient httpClient = _httpClientFactory.CreateClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {

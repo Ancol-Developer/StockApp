@@ -12,11 +12,13 @@ namespace StockApp.Controllers
     public class StocksController : Controller
     {
         private readonly IFinnhubService _finnhubService;
+        private readonly ILogger<StocksController> _logger;
         private readonly TradingOption _tradingoptions;
 
-        public StocksController(IFinnhubService finnhubService, IOptions<TradingOption> tradingoptions)
+        public StocksController(IFinnhubService finnhubService, IOptions<TradingOption> tradingoptions,ILogger<StocksController> logger)
         {
             _finnhubService = finnhubService;
+            _logger = logger;
             _tradingoptions = tradingoptions.Value;
         }
         [Route("/")]
@@ -25,6 +27,8 @@ namespace StockApp.Controllers
 
         public async Task<IActionResult> Explore(string? stock, bool showAll = false)
         {
+            _logger.LogInformation("In StockController Explore action Method");
+            _logger.LogDebug("stock: {stock}, showAll: {showAll}",stock,showAll);
             // get company profile from API Server
             List<Dictionary<string, string>>? stocksDictionary = await _finnhubService.GetStocks();
             List<Stock> stocks = new List<Stock>();

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using ServiceContracts;
 using StockApp;
 using StockApp.ServiceContracts;
+using System.ComponentModel;
 
 namespace StockMarketSolution.ViewComponents
 {
@@ -28,7 +29,6 @@ namespace StockMarketSolution.ViewComponents
             _finnhubService = finnhubService;
             _configuration = configuration;
         }
-
         public async Task<IViewComponentResult> InvokeAsync(string? stockSymbol)
         {
             Dictionary<string, object>? companyProfileDict = null;

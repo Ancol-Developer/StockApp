@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using ServiceContracts;
+using StockApp.Filters.ActionFilters;
 using StockApp.Models;
 using StockApp.ServiceContracts;
 
@@ -56,6 +57,7 @@ namespace StockApp.Controllers
 
         [Route("[action]")]
         [HttpPost]
+        [TypeFilter(typeof(CreateOrderActionFilter))]
         public async Task<IActionResult> BuyOrder(BuyOrderRequest buyOrderRequest)
         {
             ModelState.Clear();
@@ -76,6 +78,7 @@ namespace StockApp.Controllers
 
         [Route("[action]")]
         [HttpPost]
+        [TypeFilter(typeof(CreateOrderActionFilter))]
         public async Task<IActionResult> SellOrder(SellOrderRequest sellOrderRequest)
         {
             ModelState.Clear();

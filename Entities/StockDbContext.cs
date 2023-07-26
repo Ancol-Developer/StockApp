@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.IdentityEntities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class StockDbContext :DbContext
+    public class StockDbContext :IdentityDbContext<ApplicationUser,ApplicationRole,Guid>
     {
         public StockDbContext(DbContextOptions option) : base(option)
         {

@@ -16,7 +16,19 @@
 {
     min-width: 500px;
 }
-
+.text-large {
+    font-size: 2.5em;
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+.form-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+}
 .app-title
 {
     font-size: 1.9em;

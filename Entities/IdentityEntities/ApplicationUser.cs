@@ -9,6 +9,6 @@ namespace Entities.IdentityEntities
 {
     public class ApplicationUser : IdentityUser<Guid>
     {
-        public string PersonName { get; set; }
+        public string? PersonName { get; set; }
     }
 }

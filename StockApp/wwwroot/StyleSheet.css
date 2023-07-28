@@ -11,7 +11,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+.account-links {
+    display: block;
+}
 .container
 {
     min-width: 500px;

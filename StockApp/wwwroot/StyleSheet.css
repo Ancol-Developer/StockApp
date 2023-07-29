@@ -377,7 +377,9 @@
 {
     flex-direction: column;
 }
-
+.flex-direction{
+    flex-direction:
+}
 .flex
 {
     display: flex;

@@ -10,10 +10,12 @@ namespace StockApp.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             this._userManager = userManager;
+            this._signInManager = signInManager;
         }
         [HttpGet]
         public IActionResult Register()
@@ -36,9 +38,11 @@ namespace StockApp.Controllers
                   PhoneNumber= registerDTO.Phone,
                   UserName=registerDTO.Email
             };
-            IdentityResult identityResult= await _userManager.CreateAsync(user);
+            IdentityResult identityResult= await _userManager.CreateAsync(user,registerDTO.Password);
             if (identityResult.Succeeded)
             {
+                // Sign in
+                await _signInManager.SignInAsync(user,false);
                 return RedirectToAction(nameof(TradeController.Order), "Trade");
             }
             else

@@ -24,10 +24,33 @@
                     <div class="flex-1 pr" id="search-box-div">
                         <input type="search" class="search-text" placeholder="Search Stock" name="SearchText" />
                         <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <div class="flex-0">
                         <div class="navbar account-links">
-                            <a asp-controller="Account" asp-action="Register">Register</a>
-                            <a asp-controller="Account" asp-action="Login">Login</a>
+                            <ul>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <i class="fa-solid fa-user"></i>
+                                        @User.Identity?.Name
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Logout">Logout</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Register">Register</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Login">Login</a>
+                                    </li>
+                                }
+                            </ul>
                         </div>
+
                     </div>
 
 
@@ -45,7 +68,7 @@
                     {
                         <li><a asp-controller="Stocks" asp-action="Explore">Explore</a></li>
                     }
-                    @if(ViewBag.CurrentUrl == "~/Trade/Index")
+                    @if (ViewBag.CurrentUrl == "~/Trade/Index")
                     {
                         <li><a asp-controller="Trade" asp-action="Index" class="nav-active">Trade</a></li>
                     }
@@ -61,7 +84,7 @@
                     {
                         <li><a asp-controller="Trade" asp-action="Order">Orders</a></li>
                     }
-                    
+
                 </ul>
             </div>
 

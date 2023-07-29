@@ -30,7 +30,15 @@ builder.Services.AddDbContext<StockDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddIdentity<ApplicationUser, ApplicationRole>() // tao bang trong co so du lieu
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+{
+    options.Password.RequiredLength = 5;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireDigit = true;
+    options.Password.RequiredUniqueChars = 3; // eg: AB12AB (unique characters are A,B,1,2)
+}) // tao bang trong co so du lieu
     .AddEntityFrameworkStores<StockDbContext>() // context su dung trong app
     .AddDefaultTokenProviders()// usiing setup new password,change email
     // create repository cua user va role de thao tac du lieu nguoi dung trong dbcontext
@@ -48,7 +56,8 @@ builder.Services.AddScoped<IStockService, StockService>();
 var app = builder.Build();
 
 app.UseStaticFiles();
-app.UseRouting();
-app.MapControllers();
+app.UseAuthentication(); // erading identity cookie
+app.UseRouting();// identity action method based route
+app.MapControllers();// execute the filter pipeline(action+filters)
 
 app.Run();

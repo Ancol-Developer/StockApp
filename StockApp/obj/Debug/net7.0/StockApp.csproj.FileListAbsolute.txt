@@ -246,3 +246,9 @@ C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Microsoft.AspNetCore
 C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

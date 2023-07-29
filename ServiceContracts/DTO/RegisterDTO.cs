@@ -24,6 +24,7 @@ namespace ServiceContracts.DTO
         public string Phone { get; set; }
         [Required(ErrorMessage = "Confirm Password can't be blank")]
         [DataType(DataType.Password)]
+        [Compare("Password",ErrorMessage ="Password and Confirm Password is not match")]
         public string ConfirmPassword { get; set; }
     }
 }

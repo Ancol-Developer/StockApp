@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj": {}
+    "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj": {
+    "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,21 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj": {
+    "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj",
+        "projectUniqueName": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj",
         "projectName": "ServiceContracts",
-        "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\ServiceContracts.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\ServiceContracts\\obj\\",
+        "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\ServiceContracts.csproj",
+        "packagesPath": "C:\\Users\\Ancol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ancol\\Desktop\\New folder\\ServiceContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ancol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,8 +97,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\WORKSPACE\\ASP.Net\\StockApp\\Entities\\Entities.csproj"
+              "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ancol\\Desktop\\New folder\\Entities\\Entities.csproj"
               }
             }
           }
@@ -128,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

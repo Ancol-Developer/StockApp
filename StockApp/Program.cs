@@ -1,5 +1,6 @@
 using Entities;
 using Entities.IdentityEntities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +45,17 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     // create repository cua user va role de thao tac du lieu nguoi dung trong dbcontext
     .AddUserStore<UserStore<ApplicationUser,ApplicationRole,StockDbContext,Guid>>() // cho user
     .AddRoleStore<RoleStore<ApplicationRole, StockDbContext, Guid>>(); // cho role
+builder.Services.AddAuthorization(options =>
+{
+    options.FallbackPolicy= new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+    // enfores authoriation policy (user must be authenticated) for all the action methods
+});
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+});
 
+//Filter
 builder.Services.AddTransient<CreateOrderActionFilter>();
 
 
@@ -56,8 +67,9 @@ builder.Services.AddScoped<IStockService, StockService>();
 var app = builder.Build();
 
 app.UseStaticFiles();
-app.UseAuthentication(); // erading identity cookie
 app.UseRouting();// identity action method based route
+app.UseAuthentication(); // erading identity cookie
+app.UseAuthorization();// validate access permissions of the user
 app.MapControllers();// execute the filter pipeline(action+filters)
 
 app.Run();

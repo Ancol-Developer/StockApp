@@ -62,7 +62,7 @@ namespace StockApp.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        public async Task<IActionResult> Login(LoginDTO loginDTO,string? returnUrl)
         {
             if (!ModelState.IsValid)
             {
@@ -72,6 +72,10 @@ namespace StockApp.Controllers
             var result =await _signInManager.PasswordSignInAsync(loginDTO.Email, loginDTO.Password, isPersistent: false,lockoutOnFailure:false);
             if (result.Succeeded)
             {
+                if (!string.IsNullOrEmpty(returnUrl)&&Url.IsLocalUrl(returnUrl))
+                { 
+                    return LocalRedirect(returnUrl);
+                }
                 return RedirectToAction(nameof(TradeController.Order),"Trade");
             }
             ModelState.AddModelError("Login","Invalid email or password");

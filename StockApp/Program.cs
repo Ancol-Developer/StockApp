@@ -71,5 +71,11 @@ app.UseRouting();// identity action method based route
 app.UseAuthentication(); // erading identity cookie
 app.UseAuthorization();// validate access permissions of the user
 app.MapControllers();// execute the filter pipeline(action+filters)
-
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name:"Default",
+        pattern:"{controller}/{action}/{id?}");
+});
 app.Run();
+ 

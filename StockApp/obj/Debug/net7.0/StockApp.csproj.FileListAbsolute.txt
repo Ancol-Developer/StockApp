@@ -252,3 +252,7 @@ C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Micr
 C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\admin\Desktop\WORKSPACE\ASP.Net\StockApp\StockApp\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Ancol\Desktop\New folder\StockApp\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\Ancol\Desktop\New folder\StockApp\obj\Debug\net7.0\StockApp.MvcApplicationPartsAssemblyInfo.cs

@@ -9,7 +9,7 @@ using ServiceContracts.DTO;
 namespace StockApp.Controllers
 {
     [Route("[controller]/[action]")]
-    [AllowAnonymous]
+    //[AllowAnonymous]
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -23,11 +23,14 @@ namespace StockApp.Controllers
             this._roleManager = roleManager;
         }
         [HttpGet]
+        [Authorize("NotAuthenticated")]
         public IActionResult Register()
         {
             return View();
         }
         [HttpPost]
+        [Authorize("NotAuthenticated")]
+
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
             // check for validation errors
@@ -63,6 +66,15 @@ namespace StockApp.Controllers
                 }
                 else
                 {
+                    //Create 'user' role
+                    if (await _roleManager.FindByNameAsync(UserTypeOptions.user.ToString()) is null)
+                    {
+                        ApplicationRole applicationRole = new ApplicationRole
+                        {
+                            Name = UserTypeOptions.user.ToString()
+                        };
+                        await _roleManager.CreateAsync(applicationRole);
+                    }
                     await _userManager.AddToRoleAsync(user,UserTypeOptions.user.ToString());
                 }
                 // Sign in
@@ -79,11 +91,15 @@ namespace StockApp.Controllers
             return View(registerDTO);
         }
         [HttpGet]
+        [Authorize("NotAuthenticated")]
+
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
+        [Authorize("NotAuthenticated")]
+
         public async Task<IActionResult> Login(LoginDTO loginDTO, string? returnUrl)
         {
             if (!ModelState.IsValid)
@@ -94,6 +110,15 @@ namespace StockApp.Controllers
             var result = await _signInManager.PasswordSignInAsync(loginDTO.Email, loginDTO.Password, isPersistent: false, lockoutOnFailure: false);
             if (result.Succeeded)
             {
+                //Admin
+                ApplicationUser user = await _userManager.FindByEmailAsync(loginDTO.Email);
+                if (user!=null)
+                {
+                    if (await _userManager.IsInRoleAsync(user,UserTypeOptions.Admin.ToString()))
+                    { 
+                        return RedirectToAction("Index","Home",new { area= "Admin" });
+                    }
+                }
                 if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                 {
                     return LocalRedirect(returnUrl);

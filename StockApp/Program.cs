@@ -3,6 +3,7 @@ using Entities.IdentityEntities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repository;
 using RepositoryContacts;
@@ -25,7 +26,11 @@ builder.Host.UseSerilog((HostBuilderContext context,IServiceProvider service,Log
 
 //Service
 builder.Services.AddHttpClient();
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(
+    options =>
+    {
+        options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+    });
 builder.Services.AddDbContext<StockDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -49,6 +54,13 @@ builder.Services.AddAuthorization(options =>
 {
     options.FallbackPolicy= new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
     // enfores authoriation policy (user must be authenticated) for all the action methods
+    options.AddPolicy("NotAuthenticated", policy =>
+    {
+        policy.RequireAssertion(context =>
+        {
+            return !context.User.Identity.IsAuthenticated;
+        });
+    });
 });
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -66,13 +78,23 @@ builder.Services.AddScoped<IFinnhubService,FinnhubService>();
 builder.Services.AddScoped<IStockService, StockService>();
 var app = builder.Build();
 
+// add https
+app.UseHsts();
+app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 app.UseRouting();// identity action method based route
+
 app.UseAuthentication(); // erading identity cookie
 app.UseAuthorization();// validate access permissions of the user
 app.MapControllers();// execute the filter pipeline(action+filters)
 app.UseEndpoints(endpoints =>
 {
+    endpoints.MapControllerRoute(
+        name: "areas",
+        pattern:"{area:exists}/{controller=Home}/{action=Index}");
+    //Admin/Home/Index
+    //Admin
     endpoints.MapControllerRoute(
         name:"Default",
         pattern:"{controller}/{action}/{id?}");
